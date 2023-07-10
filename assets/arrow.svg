@@ -1,0 +1,38 @@
+<svg class="arrow" viewBox="0 0 65 57" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 28.5C0 12.7599 14.5507 0 32.5 0C50.4493 0 65 12.7599 65 28.5C65 44.2401 50.4493 57 32.5 57C14.5507 57 0 44.2401 0 28.5Z" id="path_1" />
+    <path d="M15.3634 0L30.7268 8.64191L0 8.64191L15.3634 0Z" id="path_2" />
+    <path d="M11.5225 8.64191L19.2042 8.64191L19.2042 23.0451L11.5225 23.0451L11.5225 8.64191Z" id="path_3" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+    <clipPath id="clip_2">
+      <use xlink:href="#path_2" />
+    </clipPath>
+    <clipPath id="clip_3">
+      <use xlink:href="#path_3" />
+    </clipPath>
+  </defs>
+  <g id="Arrow-down-icon-2">
+    <g id="Oval">
+      <use stroke="none" fill="#BD8801" xlink:href="#path_1" fill-rule="evenodd" />
+      <g clip-path="url(#clip_1)">
+        <use xlink:href="#path_1" fill="none" stroke="#070706" stroke-width="2" />
+      </g>
+    </g>
+    <g id="Group-3" transform="matrix(-1 -8.742278E-08 8.742278E-08 -1 47.86316 40.02234)">
+      <g id="Triangle">
+        <use stroke="none" fill="#070706" xlink:href="#path_2" fill-rule="evenodd" />
+        <g clip-path="url(#clip_2)">
+          <use xlink:href="#path_2" fill="none" stroke="#BD8801" stroke-width="2" />
+        </g>
+      </g>
+      <g id="Rectangle">
+        <use stroke="none" fill="#070706" xlink:href="#path_3" fill-rule="evenodd" />
+        <g clip-path="url(#clip_3)">
+          <use xlink:href="#path_3" fill="none" stroke="#BD8801" stroke-width="2" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

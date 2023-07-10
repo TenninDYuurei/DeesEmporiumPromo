@@ -1,0 +1,464 @@
+@import '_variables.scss';
+@mixin column-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin row-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.cta
+{
+    border: none;
+    background-color: $black-color;
+    color: $gold-color;
+    border-radius: 50px;
+    height: 2rem;
+    box-shadow: 0 0 10px $black-color;
+    // padding: 0;
+    a{
+        text-decoration: none;
+        color: $gold-color1;
+        font-weight: bold;
+        &:visited{
+            color:$gold-color1;
+        }
+        padding: 10px;
+    }
+}
+
+
+//-------------ARROW
+svg.arrow{
+    width: 30px;
+    // height: 30px;
+    animation: arrow-up 2s ease-in infinite;
+}
+
+@keyframes arrow-up {
+    50%{
+        translate:0 10px;
+    }
+}
+
+
+// MY PICTURE AND DIV COVERING IT
+.image{
+    background: $white-color;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    padding: 30px;
+    width:60%;
+    overflow: hidden;
+    max-width: 300px;
+    max-height: 300px;
+    min-width: 200px;
+    min-height: 200px;
+    margin-top: 1rem;
+    // height: 30%;
+}
+.my-pic
+{
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+
+// BODY SECTION
+body{
+    color: $black-color;
+    font-family: Garamond;
+    &.gradient
+    {
+        background: conic-gradient(from 90deg, #070706 19%, #bd8801 77.72%);
+        background-repeat: no-repeat;
+        animation: gradient-rotate 10s ease-in infinite;
+    }
+    .cta{
+        width: 8rem;
+        min-width: 100px;
+    }
+}
+
+
+// Header section
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-bottom: 0;
+    button
+    {
+        width: 10vw;
+        min-width: 100px;
+    }
+    
+}
+
+img.logo{
+    width: 15vh;
+    min-width: 150px;
+}
+
+// MAIN SECTION 
+
+main
+{
+    
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.first-glass
+{
+    border-radius: 50px;
+    width: 100%;
+    background: linear-gradient(45deg, $white-color-transparent2, $white-color-transparent3, $white-color-transparent2);
+    backdrop-filter: 10px;
+    margin: {
+        top:15px;
+        bottom:15px;
+    }
+    padding: {
+        top:15px;
+        bottom:15px;
+    }
+    @include column-center();
+}
+
+
+// MAIN CONTENT OF EVERY SECTIOM
+.main-content
+{
+    @include column-center();
+    gap: 10%;
+}
+
+// ---------------SECTIONS
+section
+{
+    width: $mobile-section-width;
+    // max-width: 100%;
+    @include column-center();
+    margin: 20px 0;
+    gap:1rem;
+    max-height: 700px;
+    &.first-section
+    {
+        // height: 100vh;
+       .first-section-cta
+       {
+         display: flex;
+         flex-direction: column;
+        //  width: 80%;
+         background-color: $white-color-transparent3;
+         border-radius: 50px;
+         box-shadow: 0 0 15px $white-color;
+         padding: 15px;
+         gap:10px;
+         button{
+            width: 40%;
+            // height: 2rem;
+         }
+       }
+    }
+    &.second-sect
+    {
+        // background: white;
+        
+        // width: $mobile-section-width;
+        @include column-center();
+        gap: 2rem;
+        // margin-left: 20px;
+        // justify-content: space-between;
+        h2{
+            display: inline-flex;
+            justify-self: center;
+        }    
+        .criteria
+        {
+            list-style: none;
+            background-color: $white-color-transparent3;
+            border-radius: 50px;
+            padding: 20px;
+            font-weight: bold;
+            border: 3px solid $white-color;
+            li+p{
+                margin-left: 1rem;
+                &:not(:last-child){
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        .second-fold-cta
+        {
+            @include column-center();
+            gap: 1rem;
+            .message{
+                border: 2px solid $white-color-transparent3;
+                border-radius: 10px;
+                padding: 1rem;
+                width:70%;
+                font-style: italic;
+                font-weight: 500;
+                background-color: $white-color-transparent2;
+            }
+        }
+    }
+    &.third-sect
+    {
+        @include column-center();
+        gap: 2rem;
+        .image-cta
+        {
+            @include column-center();
+            gap:1rem;
+        }
+        .tips
+        {
+            // width: 70%;
+            // padding: 1rem;
+            overflow: hidden;
+            border-radius: 50px;
+            display: grid;
+            // width: auto;
+            // grid-template-columns: repeat(1, minmax(250px, 400px));
+            // flex-direction: column;
+            // justify-content: space-between;
+            height:250px;
+            .slider
+            {
+            
+                position: relative;
+                animation: tip-slide 8s ease-in-out infinite;
+            }
+            .tip
+            {
+                background-color: $white-color;
+                // width:60vw;
+                height:250px;
+                display: grid;
+                place-items: center;
+                padding: 20px;
+                font-style: italic;
+                font-weight: bold;
+                text-align: center;
+                font-size: 2rem;
+                max-width: 300px;
+            }
+        }
+    }
+
+    &.about-us
+    {
+        // background: $white-color-transparent2;
+        height: auto;
+        font-weight: bold;
+        color: $white-color;
+        text-align: center;
+        @include column-center();
+        gap: 1rem;
+        max-width: 700px;
+        h2
+        {
+            font-size: 1.5rem;
+            text-decoration: underline;
+            color: $gold-color;
+        }
+    }
+}
+h2
+{
+    font-size: $mobile-h2-fnt-size;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: $white-color;
+    .contact-links
+    {
+        display: flex;
+        gap: 1rem;
+    }
+    a
+    {
+        font-size: 1rem;
+        font-weight: bold;
+        color: $white-color;
+    }
+}
+a:visited,a:active
+{
+    color: $gold-color;
+}
+@keyframes tip-slide {
+ 0%{
+    top:0;
+ }   
+ 50%{
+    top:-250px;
+ }   
+ 90%{
+    top:-500px;
+ }   
+}
+
+.copy
+{
+    background: $black-color;
+    color: $white-color;
+    font-size: .5rem;
+}
+footer{
+    margin-top: 20px;
+}
+
+// -------MEDIA QUERIES START HERE
+
+@media (min-width:0px) and (max-width:550px) {
+    .main-content
+    {
+        gap: 1rem;
+    }
+}
+
+
+@media (min-width:400px) {
+  .first-glass
+  {
+    width: 90%;
+  }
+}
+@media (min-width:550px) {
+    h2
+    {
+        font-size: 1.5rem;
+    }
+    .main-content{
+        @include row-center();
+        
+        // gap:30px;
+    }
+    header
+    {
+        margin:10px 10px;
+    }
+}
+@media (min-width:700px) and (min-height:800px) {
+    section 
+    {
+        &:not(:first-child){
+            height:45vh ;
+            }
+    }
+}
+@media (min-width:750px) {
+    header
+    {
+        justify-content: space-around;
+    }
+        section{
+            &:not(:first-child){
+                height:70vh ;
+                }
+        &.first-section{
+            .first-section-cta
+            {
+                height: 45vh;
+                max-height: 300px;
+                max-width:500px;
+                justify-content: space-between;
+                font-size: 1.2rem;
+                h1 
+                {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+    .copy
+    {
+        font-size: 1rem;
+    }
+}
+@media (min-width:1200px) {
+    // .first-glass
+    // {
+    //     width: 80%;
+    // }
+    .about-us
+    {
+        p 
+        {
+            font-size: 1.5rem;
+        }
+    }
+    .image, .my-pic
+    {
+        max-width: 400px;
+        max-height: 400px;
+    }
+    .main-content
+    {
+        width: 100%;
+    }
+    section 
+    {
+         &:not(:first-child){
+        height:80vh ;
+    }
+        &.first-section
+        {
+            .first-section-cta
+            {
+                height: 80vh;
+                max-height: 400px;
+                h1 
+                {
+                    font-size: 2.5rem;
+                }
+                p 
+                {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        gap: 3rem;
+        &.second-fold
+        {
+            .first-section-cta
+            {
+                .message
+                {
+                    width: 80%;
+                }
+            }
+        }
+    }
+    
+    h2 
+    {
+        font-size: 2rem;
+        width: 80%;
+    }
+}
