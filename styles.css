@@ -37,7 +37,6 @@ svg.arrow {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  padding: 30px;
   width: 60%;
   overflow: hidden;
   max-width: 300px;
